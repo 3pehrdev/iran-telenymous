@@ -320,39 +320,39 @@ thanks to telenymousTM
 @joker_admin_1
 ]],
     help_text = [[
-Commands list :
+helps gp list :
 
-!kick [username|id]
+!sick [username|id]
 You can also do it by reply
 
-!ban [ username|id]
-You can also do it by reply
+!b [ username|id]
+ ban users
 
-!unban [id]
+!unb[id]
 You can also do it by reply
 
 !who
 Members list
 
-!modlist
+!mlist
 Moderators list
 
-!promote [username]
+!prom [username]
 Promote someone
 
-!demote [username]
+!dem [username]
 Demote someone
 
-!kickme
+!sickme
 Will kick user
 
 !about
 Group description
 
-!setphoto
+!sphoto
 Set and locks group photo
 
-!setname [name]
+!sname [name]
 Set group name
 
 !rules
@@ -387,10 +387,10 @@ returns group link
 !owner
 returns group owner id
 
-!setowner [id]
+!set own [id]
 Will set id as owner
 
-!setflood [value]
+!sflood [value]
 Set [value] as flood sensitivity
 
 !stats
@@ -412,10 +412,10 @@ returns user id
 !log
 will return group logs
 
-!banlist
+!blist
 will return group ban list
 
-**U can use both "/" and "!" 
+**U can use both "/" and "!" and "#" 
 
 
 *Only owner and mods can add bots in group
