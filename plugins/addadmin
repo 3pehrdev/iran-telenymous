@@ -5,19 +5,19 @@ local function callback(extra, success, result)
 end
     function run(msg, matches)
         if not is_momod or not is_owner then
-    return "Only Onwers Can Add sepehr!"
+    return "sick baw Only Onwers Can Add sudo telenymous!"
 end
     local user = 'user#id'
     local chat = 'chat#id'..msg.to.id
     chat_add_user(chat, user, callback, false)
-    return "ادمین ادد شد در: "..string.gsub(msg.to.print_name, "_", " ")..'['..msg.to.id..']'
+    return "sudo telenymous added to: "..string.gsub(msg.to.print_name, "_", " ")..'['..msg.to.id..']'
 end
 return {
     usage = {
       "Addadmin: Add Sudo In Group."
       },
     patterns = {
-        "^([Aa]ddadmin)$"
+        "^([!#/][Aa]ddadmin)$"
         },
     run = run
 }
