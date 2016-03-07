@@ -4,12 +4,12 @@ local function lock_group_namemod(msg, data, target)
   local group_name_set = data[tostring(target)]['settings']['set_name']
   local group_name_lock = data[tostring(target)]['settings']['lock_name']
   if group_name_lock == 'yes' then
-    return 'Group name is already locked'
+    return 'Gp name already locked'
   else
     data[tostring(target)]['settings']['lock_name'] = 'yes'
     save_data(_config.moderation.data, data)
     rename_chat('chat#id'..target, group_name_set, ok_cb, false)
-  return 'Group name has been locked'
+  return 'Gp name locked'
   end
 end
 
@@ -17,66 +17,66 @@ local function unlock_group_namemod(msg, data, target)
   local group_name_set = data[tostring(target)]['settings']['set_name']
   local group_name_lock = data[tostring(target)]['settings']['lock_name']
   if group_name_lock == 'no' then
-    return 'Group name is already unlocked'
+    return 'Gp name already unlocked'
   else
     data[tostring(target)]['settings']['lock_name'] = 'no'
     save_data(_config.moderation.data, data)
-  return 'Group name has been unlocked'
+  return 'Gp name unlocked'
   end
 end
 
 local function lock_group_floodmod(msg, data, target)
   local group_flood_lock = data[tostring(target)]['settings']['flood']
   if group_flood_lock == 'yes' then
-    return 'Group flood is locked'
+    return 'Gp flood locked'
   else
     data[tostring(target)]['settings']['flood'] = 'yes'
     save_data(_config.moderation.data, data)
-  return 'Group flood has been locked'
+  return 'Gp flood locked'
   end
 end
 
 local function unlock_group_floodmod(msg, data, target)
   local group_flood_lock = data[tostring(target)]['settings']['flood']
   if group_flood_lock == 'no' then
-    return 'Group flood is not locked'
+    return 'Gp flood not locked'
   else
     data[tostring(target)]['settings']['flood'] = 'no'
     save_data(_config.moderation.data, data)
-  return 'Group flood has been unlocked'
+  return 'Gp flood unlocked'
   end
 end
 
 local function lock_group_membermod(msg, data, target)
   local group_member_lock = data[tostring(target)]['settings']['lock_member']
   if group_member_lock == 'yes' then
-    return 'Group members are already locked'
+    return 'Gp members already locked'
   else
     data[tostring(target)]['settings']['lock_member'] = 'yes'
     save_data(_config.moderation.data, data)
   end
-  return 'Group members has been locked'
+  return 'Gp members locked'
 end
 
 local function unlock_group_membermod(msg, data, target)
   local group_member_lock = data[tostring(target)]['settings']['lock_member']
   if group_member_lock == 'no' then
-    return 'Group members are not locked'
+    return 'Gp members not locked'
   else
     data[tostring(target)]['settings']['lock_member'] = 'no'
     save_data(_config.moderation.data, data)
-  return 'Group members has been unlocked'
+  return 'Gp members unlocked'
   end
 end
 
 local function unlock_group_photomod(msg, data, target)
   local group_photo_lock = data[tostring(target)]['settings']['lock_photo']
   if group_photo_lock == 'no' then
-      return 'Group photo is not locked'
+      return 'Gp photo not locked'
   else
       data[tostring(target)]['settings']['lock_photo'] = 'no'
       save_data(_config.moderation.data, data)
-  return 'Group photo has been unlocked'
+  return 'Gp photo unlocked'
   end
 end
 
@@ -257,7 +257,7 @@ local function run(msg, matches)
         local name = user_print_name(msg.from)
         savelog(matches[1], name.." ["..msg.from.id.."] revoked group link ")
         export_chat_link(receiver, callback, true)
-        return "Created a new new link ! \n owner can get it by /owners "..matches[1].." get link"
+        return "Created new link ! \n owner can get it by /owners "..matches[1].." get link"
       end
     end
     if matches[2] == 'get' then 
@@ -271,7 +271,7 @@ local function run(msg, matches)
         end
         local name = user_print_name(msg.from)
         savelog(matches[1], name.." ["..msg.from.id.."] requested group link ["..group_link.."]")
-        return "Group link:\n"..group_link
+        return "Gp link for ["..group_name.."]:\n"..group_link
       end
     end
     if matches[1] == 'changeabout' and matches[2] and is_owner2(msg.from.id, matches[2]) then
