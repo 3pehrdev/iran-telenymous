@@ -234,28 +234,31 @@ An advance Administration bot based on teleseed
 Thank for
 Admins
 @joker_admin_1 [Manager_founder]
+iran telenymous
+v 2.1
+beta
 Special thanks to
 Seyedan
 Imandaneshi
 Alphonse
 Our channels
-@telenymousch
+nadarim
 ]],
     help_text_realm
  = [[
-Realm Commands:
+Realm helps:
 
-!creategroup [Name]
-Create a group
+!creategroup [x]
+Create a group x
 
-!createrealm [Name]
-Create a realm
+!createrealm [x]
+Create a realm x
 
-!setname [Name]
-Set realm name
+!setname [x]
+Set realm name to x
 
-!setabout [GroupID] [Text]
-Set a group's about text
+!setabout [GroupID] [x]
+Set a group's about text to x
 
 !setrules [GroupID] [Text]
 Set a group's rules
@@ -312,9 +315,9 @@ This command will send text to [group_id]
 *Only admins and sudo can add bots in group
 
 
-*Only admins and sudo can use kick,ban,unban,newlink,setphoto,setname,lock,unlock,set rules,set about and settings commands
+thanks to telenymousTM
 
-*Only admins and sudo can use res, setowner, commands
+@joker_admin_1
 ]],
     help_text = [[
 Commands list :
@@ -418,9 +421,9 @@ will return group ban list
 *Only owner and mods can add bots in group
 
 
-*Only moderators and owner can use kick,ban,unban,newlink,link,setphoto,setname,lock,unlock,set rules,set about and settings commands
+thanks to telenymousTM
 
-*Only owner can use res,setowner,promote,demote and log commands
+@joker_admin_1
 
 ]]
   }
