@@ -169,7 +169,7 @@ local function run(msg, matches)
          	return
         end
         if not is_admin(msg) and is_momod2(matches[2], msg.to.id) then
-          	return "you can't ban mods/owner/admins"
+          	return "you can't ban mods,owner,admins and sudo"
         end
         if tonumber(matches[2]) == tonumber(msg.from.id) then
           	return "You can't ban your self !"
@@ -308,21 +308,21 @@ end
 
 return {
   patterns = {
-    "^[!/]([Bb]anall) (.*)$",
-    "^[!/]([Bb]anall)$",
-    "^[!/]([Bb]anlist) (.*)$",
-    "^[!/]([Bb]anlist)$",
-    "^[!/]([Gg]banlist)$",
-    "^[!/]([Bb]an) (.*)$",
-    "^[!/]([Kk]ick)$",
-    "^[!/]([Uu]nban) (.*)$",
-    "^[!/]([Uu]nbanall) (.*)$",
-    "^[!/]([Uu]nbanall)$",
-    "^[!/]([Kk]ick) (.*)$",
-    "^[!/]([Kk]ickme)$",
-    "^[!/]([Bb]an)$",
-    "^[!/]([Uu]nban)$",
-    "^[!/]([Ii]d)$",
+    "^[#!/]([Bb]all) (.*)$",
+    "^[!#/]([Bb]anall)$",
+    "^[!#/]([Bb]anlist) (.*)$",
+    "^[#!/]([Bb]anlist)$",
+    "^[#!/]([Gg]banlist)$",
+    "^[!#/]([Bb]an) (.*)$",
+    "^[#!/]([Kk]ick)$",
+    "^[!#/]([Uu]nban) (.*)$",
+    "^[!#/]([Uu]nbanall) (.*)$",
+    "^[!#/]([Uu]nball)$",
+    "^[!/#]([Ss]ick) (.*)$",
+    "^[!/#]([Ss]ickme)$",
+    "^[!#/]([Bb])$",
+    "^[!#/]([Uu]nb)$",
+    "^[#!/]([Ii]d)$",
     "^!!tgservice (.+)$"
   },
   run = run,
